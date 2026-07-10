@@ -1,0 +1,238 @@
+// 
+
+/* ROOT */
+.sinup {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  
+  background: #ffffff;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------------- LEFT SIDE ---------------- */
+.left {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideLeft 0.8s ease forwards;
+
+  /* LOTTIE SIZE CONTROL */
+  > div {
+    width: 360px;
+    height: 360px;
+    animation: float 4s ease-in-out infinite;
+  }
+}
+
+/* ---------------- RIGHT SIDE ---------------- */
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideRight 0.8s ease forwards;
+
+  /* INNER CONTENT */
+  > .container {
+    box-shadow: none;
+    background: transparent;
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 3rem;
+  }
+}
+
+/* HEADER */
+.header {
+  margin-bottom: 1.5rem;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  p {
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 14px;
+  }
+}
+
+/* ROLE SELECT */
+.roleSelect {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 1.75rem;
+}
+
+.roleBtn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.active {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* INPUT FIELD */
+.field {
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 52px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1.5px solid #e2e8f0;
+    outline: none;
+    transition: 0.25s ease;
+
+    &:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+    }
+
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      top: -8px;
+      font-size: 12px;
+      color: #2563eb;
+      background: #fff;
+      padding: 0 6px;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: #64748b;
+    pointer-events: none;
+    transition: 0.25s ease;
+  }
+}
+
+/* FIXED LABEL (DATE FIELD) */
+.fixedLabel {
+  top: -8px;
+  font-size: 12px;
+  color: #2563eb;
+  background: #fff;
+  padding: 0 6px;
+}
+
+/* CONDITIONAL GROUP */
+.group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* SUBMIT */
+.submitWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.submit {
+  width: 240px;
+  height: 54px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+}
+
+/* NOTE */
+.note {
+  text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 0.75rem;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .group {
+    grid-template-columns: 1fr;
+  }
+}

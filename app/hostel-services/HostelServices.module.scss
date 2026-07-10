@@ -1,0 +1,272 @@
+.hostelServices {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .serviceSelect {
+    margin-bottom: 2rem;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    select {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+  }
+
+  .form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #1a3d7c;
+    }
+
+    fieldset {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      legend {
+        font-weight: 600;
+        padding: 0 0.5rem;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.6rem;
+        margin-top: 0.8rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+
+      label {
+        display: block;
+        margin-top: 1rem;
+      }
+    }
+
+    .declaration {
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      background: #1a3d7c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        background: #102b5c;
+      }
+    }
+  }
+}
+.agreementSection {
+  margin-top: 2.5rem;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    color: #1a3d7c;
+  }
+}
+
+
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.card {
+  background: linear-gradient(
+    135deg,
+    #f8fafc,
+    #eef2ff
+  );
+
+  padding: 2rem;
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 280px;
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+
+  margin-top: 1rem;
+  padding: 0.7rem 1.4rem;
+
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #4338ca, #4f46e5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(79, 70, 229, 0.35);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 12px rgba(79, 70, 229, 0.25);
+}
+
+.checkbox {
+  display: block;
+  margin-top: 1rem;
+}
+.download {
+  background: linear-gradient(
+    135deg,
+    #e0e7ff,
+    #eef2ff
+  );
+  border-left: 6px solid #2563eb;
+}
+
+
+.submit {
+  background: linear-gradient(
+    135deg,
+    #dcfce7,
+    #f0fdf4
+  );
+  border-left: 6px solid #16a34a;
+}
+
+
+
+.download .btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  box-shadow: 0 10px 18px rgba(37, 99, 235, 0.35);
+}
+.submit .btn {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.submit .btn:hover {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  box-shadow: 0 10px 18px rgba(22, 163, 74, 0.35);
+}
+.submit button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 1.2rem;
+}
+
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin-bottom: 1.2rem;
+}
+
+
+.card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.card input[type="file"] {
+  margin-bottom: 1rem;
+}
+
+.checkbox {
+  font-size: 0.9rem;
+  color: #374151;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,125 @@
+.header {
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 12px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.collegeName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 18px;
+
+
+  a {
+font-size: 15px;
+    font-weight: 700;
+    color: #374151;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #1e40af;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #1e40af;
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+/* Hide logos on small screens */
+.hideMobile {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .hideMobile {
+    display: none;
+  }
+}
+.dropdown {
+  position: relative;
+
+  &:hover .dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 130%;
+  left: 0;
+
+  min-width: 220px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 0.75rem 0;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+.navItem {
+    font-size: 15px;
+    font-weight: 700;
+}
+  a {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    color: #0b1b2e;
+    text-decoration: none;
+
+    &:hover {
+      background: #f2f8ff;
+      color: #0070f3;
+    }
+  }
+}

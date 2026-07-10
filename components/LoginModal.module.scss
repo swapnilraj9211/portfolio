@@ -1,0 +1,126 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  width: 70%;
+  max-width: 900px;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  animation: popup 0.35s ease;
+}
+
+.close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+/* LOTTIE */
+.lottieBox {
+  max-width: 380px;
+  margin: auto;
+}
+
+/* FORM */
+.formBox {
+  width: 100%;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+}
+
+.form input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+}
+
+.form button {
+  padding: 14px;
+  border-radius: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.signup {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.signup button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .modal {
+    width: 92vw;
+  }
+
+  .modalGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .lottieBox {
+    max-width: 260px;
+  }
+}
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.left {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
